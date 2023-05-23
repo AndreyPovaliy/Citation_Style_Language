@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" initialize-with-hyphen="false" page-range-format="minimal">
   <info>
-    <title>Vancouver</title>
-    <id>https://csl.mendeley.com/styles/627674881/vancouver</id>
+    <title>VancouverRadiationDiagnosticsAndTherapy - Andrey Povaliy</title>
+    <id>http://csl.mendeley.com/styles/627674881/vancouverVancouverRadiationDiagnosticsAndTherapy</id>
     <link href="http://www.zotero.org/styles/vancouver" rel="self"/>
     <link href="http://www.nlm.nih.gov/bsd/uniform_requirements.html" rel="documentation"/>
     <author>
@@ -16,10 +16,14 @@
     <contributor>
       <name>Sebastian Karcher</name>
     </contributor>
+    <contributor>
+      <name>Andrey Povaliy</name>
+      <uri/>
+    </contributor>
     <category citation-format="numeric"/>
     <category field="medicine"/>
     <summary>Vancouver style as outlined by International Committee of Medical Journal Editors Uniform Requirements for Manuscripts Submitted to Biomedical Journals: Sample References</summary>
-    <updated>2023-05-23T09:07:25+00:00</updated>
+    <updated>2023-05-23T19:02:02+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -89,7 +93,7 @@
     <choose>
       <if variable="URL">
         <group delimiter=": ">
-          <text term="available at" text-case="capitalize-first"/>
+          <text text-case="capitalize-first" prefix="doi^ "/>
           <text variable="DOI"/>
         </group>
       </if>
@@ -138,7 +142,7 @@
         </group>
       </else-if>
       <else-if type="speech">
-        <group delimiter=": " suffix=";">
+        <group delimiter=": " suffix=",">
           <group delimiter=" ">
             <text variable="genre" text-case="capitalize-first"/>
             <text term="presented at"/>
@@ -276,8 +280,8 @@
   <macro name="journal-location">
     <choose>
       <if type="article-journal article-magazine review review-book" match="any">
-        <text variable="volume" prefix="Vol. "/>
-        <text variable="issue" prefix=" N."/>
+        <text variable="volume" prefix=" Vol. "/>
+        <text variable="issue" prefix=" No."/>
       </if>
     </choose>
   </macro>
@@ -322,7 +326,7 @@
   <bibliography et-al-min="7" et-al-use-first="6" second-field-align="flush">
     <layout>
       <text variable="citation-number" suffix="."/>
-      <group suffix="/ ">
+      <group suffix="// ">
         <text macro="author"/>
         <text macro="title"/>
       </group>
